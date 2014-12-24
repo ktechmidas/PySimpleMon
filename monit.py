@@ -8,6 +8,8 @@ import threading
 
 class Monit:
 
+self.auth = "[PUT YOUR PUSHBULLET TOKEN HERE]"
+
     def __init__(self, ip):
         self.ip = ip
 
@@ -21,7 +23,7 @@ class Monit:
         data = {"type": "note", "title": "Server Down!", "body": "Server "+self.ip+ " cannot be reached."}
 
         session = requests.Session()
-        session.auth = ("[PUT YOUR PUSHBULLET TOKEN HERE", "")
+        session.auth = (self.auth, "")
         session.headers.update({'Content-Type': 'application/json'})
 
         pureturn = session.post(remote, data=json.dumps(data))

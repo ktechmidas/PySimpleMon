@@ -21,6 +21,8 @@ Use: python monit.py 1.2.3.4
 ==TODO==
 
 - The script will currently check every 5 minutes, when it is down it will check every hour and notify the user by PushBullet.
+
+
 --This needs to be variable and changable, the user should be able to acknowledge the alert.
 
--A way to kill the script without having to kill the process. (Daemon?)
+- A way to kill the script without having to kill the process. (Daemon?)
